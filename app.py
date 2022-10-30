@@ -23,12 +23,11 @@ class Window(QMainWindow, Ui_MainWindow):
 
 if __name__ == "__main__":
 
-    app = QApplication(sys.argv)
-    win = Window()
-    win.show()
     while True:
+        app = QApplication(sys.argv)
+        win = Window()
+        win.show()
         x = database.get_current_tag()
         win.label.setText(x)
-        time.sleep(1)
-
-    sys.exit(app.exec())
+        #time.sleep(1)
+        sys.exit(app.exec())
