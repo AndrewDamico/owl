@@ -21,3 +21,5 @@ def get_current_tag():
     conn.close()
     return data[0]
 
+if __name__ == "__main__":
+    print (get_current_tag())
