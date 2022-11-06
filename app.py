@@ -1,5 +1,5 @@
 import sys
-from PyQt5.QtWidgets import QApplication, QDialog, QMainWindow, QLabel
+from PyQt5.QtWidgets import QApplication, QDialog, QMainWindow, QLabel, QWidget
 from PyQt5.uic import loadUi
 from main_ui import Ui_MainWindow
 import database
@@ -19,7 +19,8 @@ class Window(QMainWindow, Ui_MainWindow):
 
 	def UiComponents(self):
 		self.showMaximized()
-    		
+
+        
 
 if __name__ == "__main__":
 
@@ -29,5 +30,5 @@ if __name__ == "__main__":
         win.show()
         x = database.get_current_tag()
         win.label.setText(x)
-        #time.sleep(1)
+        QWidget.update()
         sys.exit(app.exec())
